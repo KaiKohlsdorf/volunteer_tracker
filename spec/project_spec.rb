@@ -1,5 +1,4 @@
 require "spec_helper"
-require "project"
 
 describe Project do
   describe '#title' do
@@ -9,11 +8,12 @@ describe Project do
     end
   end
 
-  # context '#id' do
-  #   it 'returns the id of the project before saving project' do
-  #     project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-  #     expect(project.id).to eq nil
-  #   end
+  context '#id' do
+    it 'returns the id of the project before saving project' do
+      project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      expect(project.id).to eq nil
+    end
+  end
 
   #   it 'returns the id of the project after saving project' do
   #     project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
@@ -34,7 +34,7 @@ describe Project do
   #   it 'is empty to start' do
   #     expect(Project.all).to eq []
   #   end
-
+  # 
   #   it 'returns all projects' do
   #     project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
   #     project1.save
