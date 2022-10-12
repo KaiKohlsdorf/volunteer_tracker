@@ -21,6 +21,10 @@ Volunteer Tracker is an application that allows a user to track projects and the
 * Then run $ ruby app.rb
 * In your browser connect to localhost:4567
 
+## Database Schema
+
+![volunteer schema image](/public/projects_volunteers%20.png)
+
 ## Known Bugs
 
 No bugs have been found or reported.
