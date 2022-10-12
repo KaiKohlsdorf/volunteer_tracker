@@ -45,17 +45,10 @@ class Volunteer
     end
   end
   
-  def update(attributes)
-    if (attributes.has_key?(:name)) && (attributes.fetch(:name) != nil)
-      @name = attributes.fetch(:name)
-      DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = #{@id};")
-    elsif (attributes.has_key?(:project_id)) && (attributes.fetch(:project_id) != nil)
-      project_id = attributes.fetch(:project_id)
-      project = DB.exec("SELECT * FROM projects WHERE lower(name)='#{project_id.downcase}';").first
-      if project != nil
-        DB.exec("INSERT INTO projects_artists (project_id, artist_id) VALUES (#{project['id'].to_i}, #{@id});")
-      end
-    end
+  def update(name, project_id)
+    @name = name
+    @project_id = project_id
+    DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE id = #{@id};")
   end
 
   def delete

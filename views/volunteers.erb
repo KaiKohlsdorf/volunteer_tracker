@@ -4,8 +4,8 @@
 <form  action='/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>' method="post">
 <input type="hidden"   name="_method" value="patch">
   <div class='form-group'>
-    <label for="vol_name">Rename volunteer</label>
-    <input id="vol_name" name="vol_name" type="text" class='form-control'>
+    <label for="name">Rename volunteer</label>
+    <input id="name" name="name" type="text" class='form-control'>
   </div>
   <button type="submit" name="button">Update Volunteer</button>
 </form>
