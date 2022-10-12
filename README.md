@@ -1,6 +1,6 @@
 # Volunteer Tracker
 
-Volunteer Tracker is an application that allows a user to track projects and their matching volunteers.
+Volunteer Tracker is an application that allows a user to track projects and their matching volunteers. It has nested CRUD (Create, Read, Update, and Delete) functionality in a SQL database in a one-to-many relationship.
 
 ### by [Kai Kohlsdorf](http://github.com/KaiKohlsdorf)
 
@@ -12,6 +12,7 @@ Volunteer Tracker is an application that allows a user to track projects and the
 * Capybara
 * Postgresql
 * SQL Designer
+* HTML
 
 ## Installation
 
@@ -20,6 +21,9 @@ Volunteer Tracker is an application that allows a user to track projects and the
 * In the terminal, run $ bundle install
 * Then run $ ruby app.rb
 * In your browser connect to localhost:4567
+* You may need to install Ruby on your machine: https://www.learnhowtoprogram.com/ruby-and-rails-part-time/getting-started-with-ruby/ruby-installation-and-setup
+
+* You may need to install Postgresql on your machine: https://www.learnhowtoprogram.com/ruby-and-rails-part-time/getting-started-with-ruby/installing-postgres
 
 ## Database Schema
 
