@@ -8,10 +8,13 @@ describe Volunteer do
     end
   end
 
-  describe '#project_id' do
-    it 'returns the project_id of the volunteer' do
-      test_volunteer = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
-      expect(test_volunteer.project_id).to eq 1
+  describe '#project' do
+    it 'finds the project a volunteer belongs to' do
+      project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      project.save
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => project.id, :id => nil})
+      volunteer1.save
+      expect(volunteer1.project()).to(eq(project))
     end
   end
 
