@@ -53,7 +53,6 @@ class Volunteer
 
   def delete
     DB.exec("DELETE FROM volunteers WHERE id = #{@id};")
-    DB.exec("DELETE FROM projects WHERE volunteer_id = #{@id};") 
   end
 
   def self.find_by_project(p_id)
